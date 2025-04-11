@@ -23,9 +23,9 @@ pip install -r requirements.txt
 If you find our work useful in your research, please consider citing:
 
 ```bibtex
-@article{lastname2024invisible,
+@article{Hatano2025EgoH4,
   title={The Invisible EgoHand: 3D Hand Forecasting through EgoBody Pose Estimation},
-  author={LastName, FirstName and OtherAuthor, Name},
+  author = {Hatano, Masashi and Zhu, Zhifan and Saito, Hideo and Damen, Dima},
   journal={arXiv preprint arXiv:2505.XXXXX},
   year={2025}
 }
