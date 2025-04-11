@@ -1,0 +1,39 @@
+# Model Name
+model: egoh4
+
+# MLP Parameters
+mlp:
+  in_features: 384  # vit-s16-224: 384, vit-b16-224: 768
+  out_features: 128
+  hidden_features: 128
+
+# Network Parameters
+d_feats: 171  # 17 joints * 3 dimensions
+d_cond: 13  # head translation + 6D rotation + 2D location of hands
+embed_dim: 512
+num_layer: 4
+nhead: 8
+max_timesteps: 30
+timesteps: 1000
+objective: 'pred_x0'
+loss_type: 'l1'
+lambda_body: 1
+lambda_repro: 5e-2
+lambda_vis: 1e-1
+
+ema:
+  decay: 0.995
+  update_every: 10  # iterations
+
+# Optimizer Parameters
+optimizer:
+  epochs: 100
+
+  opt: Adam
+  opt_eps: 1e-8
+  opt_betas: [0.9, 0.95]
+  weight_decay: 0
+  lr: 1e-4
+
+  # Scheduler Parameters
+  scheduler:

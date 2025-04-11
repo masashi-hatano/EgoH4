@@ -15,7 +15,21 @@
 ```bash
 git clone https://github.com/masashi-hatano/EgoH4.git
 cd EgoH4
+python3 -m venv egoh4
+source egoh4/bin/activate
 pip install -r requirements.txt
+```
+
+## 🔥 Training
+Please run the following command to train the EgoH4 model. The checkpoint can be downloaded from [here](https://keiojp0-my.sharepoint.com/:f:/g/personal/hatano1210_keio_jp/Eg2tPpVXaj9Ck7-fYiOO8h4B0HrPjV5LybFbhCQOKmJzPw?e=lkgf9d).
+```bash
+python3 lit_main.py train=True test=False
+```
+
+## 🔍 Evaluation
+To evaluate the model, please run the following command.
+```bash
+python3 lit_main.py train=False test=True devices=[0] strategy=auto
 ```
 
 ## ✍️ Citation

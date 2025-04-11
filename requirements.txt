@@ -1,0 +1,13 @@
+decord==0.6.0
+deepspeed==0.10.3
+einops==0.6.1
+ema-pytorch==0.0.10
+hydra-core==1.2.0
+matplotlib==3.7.5
+opencv-python==4.8.0.76
+projectaria_tools==1.5.0
+pytorch-lightning==2.0.9
+timm==0.4.12
+tensorboard==2.14.0
+protobuf==3.20.1
+six==1.16.0
