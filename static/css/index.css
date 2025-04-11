@@ -4,13 +4,13 @@ body {
 
 
 .footer .icon-link {
-    font-size: 25px;
-    color: #000;
+  font-size: 25px;
+  color: #000;
 }
 
 .link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .dnerf {
@@ -28,8 +28,7 @@ body {
 }
 
 
-.publication-title {
-}
+.publication-title {}
 
 .publication-banner {
   max-height: parent;
@@ -44,80 +43,79 @@ body {
   object-fit: fit;
 }
 
-.publication-header .hero-body {
-}
+.publication-header .hero-body {}
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
 }
 
 .publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
+  color: #ff3860;
+  width: fit-content;
+  font-weight: bolder;
 }
 
-.publication-authors {
-}
+.publication-authors {}
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+  color: hsl(204, 86%, 53%) !important;
 }
 
 .publication-authors a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .author-block {
   display: inline-block;
 }
 
-.publication-banner img {
-}
+.publication-banner img {}
 
 .publication-authors {
   /*color: #4286f4;*/
 }
 
 .publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 
-    overflow: hidden;
-    border-radius: 10px !important;
+  overflow: hidden;
+  border-radius: 10px !important;
 }
 
 .publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.publication-body img {
-}
+.publication-body img {}
 
 .results-carousel {
-  overflow: hidden;
+  overflow: hidden
+    /* width: 90%; */
 }
 
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
-  padding: 20px;
+  /* border: 1px solid #bbb; */
+  /* border-radius: 10px; */
+  padding: 0;
   font-size: 0;
 }
 
@@ -129,9 +127,89 @@ body {
   background: #000000;
 }
 
-.eql-cntrb { 
+.eql-cntrb {
   font-size: smaller;
 }
 
+.splide {
+  width: 100%;
+  margin: 20px auto;
+}
 
+.splide .is-max-desktop {
+  max-width: 960px;
+  margin: 0 auto;
+}
 
+.splide .splide__track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splide .splide__slide {
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.splide .splide__slide:last-child {
+  margin-right: 0;
+}
+
+.splide .splide__slide video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.splide .splide__arrows .splide__arrow--next,
+.splide .splide__arrows .splide__arrow--prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  background: #fff center center no-repeat;
+  background-size: 20px 20px;
+  border: 1px solid #fff;
+  border-radius: 25091983px;
+  box-shadow: 0 2px 5px #3232321a;
+  top: 50%;
+  margin-top: -20px;
+  cursor: pointer;
+  transition: opacity .3s, -webkit-transform .3s;
+  transition: transform .3s, opacity .3s;
+  transition: transform .3s, opacity .3s, -webkit-transform .3s;
+}
+
+.splide .splide__pagination {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: .5rem 1rem;
+  text-align: center
+}
+
+.splide .splide__pagination .splide__pagination__page {
+  background: #000000;
+  width: 10px;
+  height: 10px;
+  border-radius: 25091983px;
+  display: inline-block;
+  margin: 0 3px;
+  box-shadow: 0 2px 5px #3232321a;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  cursor: pointer
+}
+
+.splide .splide__pagination .splide__pagination__page .is-active,
+.splide .splide__pagination .splide__pagination__page:hover {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4)
+}

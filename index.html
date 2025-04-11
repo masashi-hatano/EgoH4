@@ -37,7 +37,11 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <!-- Add Splide CSS (for styling the carousel) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 
+  <!-- Add Splide JS (for functionality) -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -174,7 +178,7 @@
   <section class="hero teaser is-small">
     <div class="container is-max-desktop">
       <div style="text-align: center;">
-        <img src="static/images/teaser.jpg" style="width: 80%; height: auto;" alt="MY ALT TEXT" />
+        <img src="static/images/teaser.jpg" style="width: 50%; height: auto;" alt="MY ALT TEXT" />
         <div align="left"
           style="position: relative; left: 10%; width: 80%; height: auto; margin-top: 20px; margin-bottom: 50px;">
           <figcaption>Given signals during observation: camera poses, images,
@@ -244,6 +248,87 @@
   </section>
   <!-- End image Approach -->
 
+
+  <!-- Carousel structure -->
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop" style="text-align: center;">
+        <h2 class="title">Qualitative Results</h2>
+        <h2 class="title">Hand Trajectory Forecasting</h2>
+        <div class="splide" id="splide1">
+          <div class="splide__track">
+            <ul class="splide__list" style="width: 60%;">
+              <li class="splide__slide">
+                <video poster="" id="video1" autoplay controls muted loop playsinline>
+                  <source src="static/videos/traj_in_covid.mp4" type="video/mp4">
+                </video>
+              </li>
+              <li class="splide__slide">
+                <video poster="" id="video1" autoplay controls muted loop playsinline>
+                  <source src="static/videos/traj_in_cooking.mp4" type="video/mp4">
+                </video>
+              </li>
+              <li class="splide__slide">
+                <video poster="" id="video1" autoplay controls muted loop playsinline>
+                  <source src="static/videos/traj_out_basket.mp4" type="video/mp4">
+                </video>
+              </li>
+              <li class="splide__slide">
+                <video poster="" id="video1" autoplay controls muted loop playsinline>
+                  <source src="static/videos/traj_out_dance.mp4" type="video/mp4">
+                </video>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p style="text-align: left;">
+          <b>Qualitative results for hand trajectory forecasting</b>. We show sample qualitative resutls across
+          activities: cooking, covid testing, basketball, and dance exercises. Dots in <font color="#ff0000">red</font>,
+          <font color="#228b22">green</font>, <font color="#0000ff">blue</font>, <font color="#800080">purple</font>,
+          and <font color="#ffa500">orange</font> represent the prediction of left/right future hands, ground-truth of
+          lef/right hands, and the prediction of body joints at the last observable frame, respectively. For each track
+          darker colors indicate later times.
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-body">
+      <div class="container is-max-desktop" style="text-align: center;">
+        <h2 class="title">Hand Pose Forecasting</h2>
+        <div class="splide" id="splide2">
+          <div class="splide__track">
+            <ul class="splide__list" style="width: 60%;">
+              <li class="splide__slide">
+                <video poster="" id="video1" autoplay controls muted loop playsinline>
+                  <source src="static/videos/pose_bike.mp4" type="video/mp4">
+                </video>
+              </li>
+              <li class="splide__slide">
+                <video poster="" id="video1" autoplay controls muted loop playsinline>
+                  <source src="static/videos/pose_cooking.mp4" type="video/mp4">
+                </video>
+              </li>
+              <li class="splide__slide">
+                <video poster="" id="video1" autoplay controls muted loop playsinline>
+                  <source src="static/videos/pose_covid.mp4" type="video/mp4">
+                </video>
+              </li>
+              <li class="splide__slide">
+                <video poster="" id="video1" autoplay controls muted loop playsinline>
+                  <source src="static/videos/pose_piano.mp4" type="video/mp4">
+                </video>
+            </ul>
+          </div>
+        </div>
+        <p style="text-align: left;">
+          <b>Qualitative results for hand pose forecasting</b>. Dots in <font color="#ff0000">red</font> and
+          <font color="#228b22">green</font> denote the prediction and ground-truth, respectively. Note that we expand
+          the image plane so that we can also show the out-of-view hands.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Youtube video -->
   <!-- <section class="section hero is-samll is-light">
     <div calss="hero body">
@@ -262,69 +347,6 @@
     </div>
   </section> -->
   <!-- End youtube video -->
-
-  <!-- Video carousel -->
-  <section class="section hero is-light">
-    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
-      <div class="container" style="text-align: center;">
-        <h2 class="title is-3">Qualitative Videos</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-
-          <!-- Carousel Item 1 -->
-          <div class="item item-video1">
-            <video poster="" id="video1" position: relative; autoplay controls muted loop width="60%" height="atuo"
-              overflow;>
-              <source src="static/videos/in_music.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video2">
-            <video poster="" id="video2" position: relative; autoplay controls muted loop width="60%" height="auto"
-              overflow;>
-              <source src="static/videos/in_cooking.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video3">
-            <video poster="" id="video3" position: relative; autoplay controls muted loop width="60%" height="auto"
-              overflow;>
-              <source src="static/videos/in_bike.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video4">
-            <video poster="" id="video4" position: relative; autoplay controls muted loop width="60%" height="auto"
-              overflow;>
-              <source src="static/videos/in_health.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video5">
-            <video poster="" id="video5" autoplay controls muted loop width="60%" height="auto" overflow;>
-              <source src="static/videos/out_basketball.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video6">
-            <video poster="" id="video6" autoplay controls muted loop width="60%" height="auto" overflow;>
-              <source src="static/videos/out_cooking.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video7">
-            <video poster="" id="video7" autoplay controls muted loop width="60%" height="auto" overflow;>
-              <source src="static/videos/out_bike.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video8">
-            <video poster="" id="video8" autoplay controls muted loop width="60%" height="auto" overflow;>
-              <source src="static/videos/out_dance_1.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video9">
-            <video poster="" id="video9" autoplay controls muted loop width="60%" height="auto" overflow;>
-              <source src="static/videos/out_dance_2.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End video carousel -->
 
   <!-- Paper poster -->
   <!-- <section class="section is-small">
@@ -358,7 +380,6 @@
   </section>
   <!--End BibTex citation -->
 
-
   <footer class="footer">
     <div class="container">
       <div class="columns is-centered">
@@ -367,9 +388,11 @@
 
             <p>
               This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+                target="_blank">Academic
+                Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the
+              footer.
               <br> This website is licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -386,6 +409,23 @@
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
   <!-- End of Statcounter Code -->
+
+  <script>
+    // Initialize the first Splide carousel
+    var splide1 = new Splide('#splide1', {
+      type: 'loop',
+      padding: '5rem',
+    });
+    splide1.mount();
+
+    // Initialize the second Splide carousel
+    var splide2 = new Splide('#splide2', {
+      type: 'loop',
+      padding: '5rem',
+    });
+    splide2.mount();
+  </script>
+
 
 </body>
 
